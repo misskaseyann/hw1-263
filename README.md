@@ -8,3 +8,15 @@ Makefile is a generic Makefile found on https://github.com/mbcrawfo/GenericMakef
 ## Compiling
 
 This project container is set to work correctly with the provided Makefile.  To compile, providing your files are in the necessary places (header files in the 'include' directory, etc.) simply typing ```make``` at the commandline will cause the project to compile.  Note that we use the clang++ compiler as the default, though g++ would work as well.  The authors prefer clang++ for the error messages it produces.
+
+## Notes
+
+If you receive a message like the following:
+
+```
+Creating directories
+usage: mkdir [-pv] [-m mode] directory ...
+make: *** [dirs] Error 64
+```
+
+it means that your ```src``` directory is empty.  You have likely included all files in the ```include``` directory instead.
